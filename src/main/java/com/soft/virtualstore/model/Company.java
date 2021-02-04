@@ -14,22 +14,23 @@ import java.io.Serializable;
 @Accessors(chain = true)
 @NoArgsConstructor
 @Entity
-@Table(name = "service")
+@Table(name = "tb_company")
 @EntityListeners(AuditingEntityListener.class)
-public class ServiceCard implements Serializable {
+public class Company implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @Column(name = "com_id")
     private int id;
 
-    @Column(name = "image")
+    @Column(name = "com_image")
     private String image;
 
-    @Column(name = "name")
+    @Column(name = "com_name")
     private String name;
 
-
-
+    @Column(name = "com_link")
+    private String link;
 }

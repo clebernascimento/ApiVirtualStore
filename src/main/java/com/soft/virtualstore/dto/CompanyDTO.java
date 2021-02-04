@@ -1,6 +1,6 @@
 package com.soft.virtualstore.dto;
 
-import com.soft.virtualstore.model.Services;
+import com.soft.virtualstore.model.Company;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,10 +13,11 @@ import java.util.stream.Collectors;
 @Setter
 @Accessors(chain = true)
 @NoArgsConstructor
-public class ServiceDTO {
+public class CompanyDTO {
 
     private int id;
-    private String name;
+    private String link;
     private String image;
+    private String name;
 
 }
