@@ -1,5 +1,6 @@
 package com.soft.virtualstore.model;
 
+import com.soft.virtualstore.repository.ServiceCompanyRepository;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -30,7 +31,5 @@ public class Services implements Serializable {
 
     @Column(name = "ser_name")
     private String name;
-
-
 
 }

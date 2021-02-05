@@ -22,7 +22,7 @@ public class ServiceController {
     private ServiceRepository serviceRepository;
 
     @ApiOperation("Register service one at a time")
-    @PostMapping
+    @PostMapping("/register/service")
     public ResponseEntity<Services> save(@RequestBody Services services) {
         serviceRepository.save(services);
         return new ResponseEntity<>(services, HttpStatus.OK);

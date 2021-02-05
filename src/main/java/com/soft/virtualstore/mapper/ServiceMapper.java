@@ -9,7 +9,7 @@ public class ServiceMapper {
         return new Services().setName(serviceDTO.getName()).setImage(serviceDTO.getImage());
     }
 
-    public static ServiceDTO EntityToSto(Services service){
+    public static ServiceDTO EntityToDto(Services service){
         return new ServiceDTO().setName(service.getName()).setImage(service.getImage());
     }
 }

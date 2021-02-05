@@ -1,5 +1,7 @@
 package com.soft.virtualstore.model;
 
+import com.soft.virtualstore.repository.ServiceCompanyRepository;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -23,7 +25,7 @@ public class Company implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "com_id")
-    private int id;
+    private Long id;
 
     @Column(name = "com_image")
     private String image;
@@ -33,4 +35,5 @@ public class Company implements Serializable {
 
     @Column(name = "com_link")
     private String link;
+
 }

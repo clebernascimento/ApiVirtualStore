@@ -15,7 +15,6 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 public class CompanyDTO {
 
-    private int id;
     private String link;
     private String image;
     private String name;

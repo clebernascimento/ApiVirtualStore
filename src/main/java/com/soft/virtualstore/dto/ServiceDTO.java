@@ -15,7 +15,6 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 public class ServiceDTO {
 
-    private int id;
     private String name;
     private String image;
 

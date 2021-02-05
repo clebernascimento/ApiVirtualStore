@@ -21,14 +21,14 @@ public class CompanyController {
     @Autowired
     private CompanyRepository companyRepository;
 
-    @ApiOperation("Register service one at a time")
-    @PostMapping
+    @ApiOperation("Register company one at a time")
+    @PostMapping("/register/company")
     public ResponseEntity<Company> save(@RequestBody Company company) {
         companyRepository.save(company);
         return new ResponseEntity<>(company, HttpStatus.OK);
     }
 
-    @ApiOperation("Service query, returning all in one list")
+    @ApiOperation("Company query, returning all in one list")
     @GetMapping
     public ResponseEntity<List<Company>> getAll() {
         List<Company> companyList = new ArrayList<>();
@@ -36,7 +36,7 @@ public class CompanyController {
         return new ResponseEntity<>(companyList, HttpStatus.OK);
     }
 
-    @ApiOperation("Service query, one at a time")
+    @ApiOperation("Company query, one at a time")
     @GetMapping(path = "/{id}")
     public ResponseEntity<Optional<Company>> getById(@PathVariable Long id) {
         Optional<Company> companyId;
@@ -48,7 +48,7 @@ public class CompanyController {
         }
     }
 
-    @ApiOperation("Deletes service, one at a time")
+    @ApiOperation("Deletes company, one at a time")
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<Optional<Company>> deleteById(@PathVariable Long id) {
         try {
@@ -59,7 +59,7 @@ public class CompanyController {
         }
     }
 
-    @ApiOperation("Updates service, one at a time")
+    @ApiOperation("Updates company, one at a time")
     @PutMapping(value = "/{id}")
     public ResponseEntity<Company> update(@PathVariable Long id, @RequestBody Company newCompany) {
         return companyRepository.findById(id)
