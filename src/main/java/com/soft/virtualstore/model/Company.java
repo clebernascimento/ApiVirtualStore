@@ -37,5 +37,4 @@ public class Company implements Serializable {
 
     @Column(name = "com_link")
     private String link;
-
 }
