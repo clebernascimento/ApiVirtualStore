@@ -24,7 +24,7 @@ public class Company implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "increment", strategy = "increment")
+    @GenericGenerator(name = "increment", strategy =  "increment")
     @Id
     @Column(name = "com_id")
     private Long id;

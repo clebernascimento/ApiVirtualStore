@@ -23,7 +23,7 @@ public class ServiceCompany implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "increment", strategy = "increment")
+    @GenericGenerator(name = "increment", strategy =  "increment")
     @Id
     @Column(name = "sec_id")
     private Long id;
