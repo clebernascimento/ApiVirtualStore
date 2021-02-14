@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -23,6 +24,7 @@ public class Company implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GenericGenerator(name = "increment", strategy = "increment")
     @Id
     @Column(name = "com_id")
     private Long id;
