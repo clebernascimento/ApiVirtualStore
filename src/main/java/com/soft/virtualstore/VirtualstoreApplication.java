@@ -11,5 +11,4 @@ public class VirtualstoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(VirtualstoreApplication.class, args);
 	}
-
 }
