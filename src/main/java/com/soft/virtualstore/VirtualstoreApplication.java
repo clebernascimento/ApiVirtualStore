@@ -11,4 +11,8 @@ public class VirtualstoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(VirtualstoreApplication.class, args);
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> b2da6d26cc5483d27a3911db510d45d9d879b9b4
 }
